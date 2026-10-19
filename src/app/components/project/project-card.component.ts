@@ -16,7 +16,7 @@ interface Project {
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="max-w-2xl mx-auto my-12 font-mono">
+    <section class="max-w-4xl mx-auto my-12 font-mono">
       <div
         class="flex items-center justify-between mb-6 text-xs text-terminal-muted border-b border-terminal-border pb-2"
       >

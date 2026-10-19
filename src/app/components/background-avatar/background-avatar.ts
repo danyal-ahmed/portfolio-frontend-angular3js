@@ -131,9 +131,9 @@ export class BackgroundAvatar implements AfterViewInit, OnDestroy {
 
     this.particleMaterial = new THREE.PointsMaterial({
       color: 0x7dd3fc,
-      size: 0.045,
+      size: 0.08,
       transparent: true,
-      opacity: 0.9,
+      opacity: 1,
       sizeAttenuation: true,
       depthWrite: false,
     });
