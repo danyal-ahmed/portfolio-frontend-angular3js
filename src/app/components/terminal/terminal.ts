@@ -24,12 +24,16 @@ export class Terminal {
 
   currentInput = '';
   history = signal<ChatMessage[]>([
-    { sender: 'system', text: 'Welcome! Ask me anything about me :)' },
+    { sender: 'system', text: 'Welcome! Ask me anything about Danyal Ahmed :)' },
   ]);
 
   selectPrompt(prompt: string) {
     this.currentInput = prompt;
     this.handleSubmit(new Event('submit'));
+  }
+
+  clearChat() {
+    this.history.set([]);
   }
 
   handleSubmit(e: Event) {
