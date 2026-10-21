@@ -1,5 +1,5 @@
 <div
-  class="flex flex-col border border-terminal-border bg-terminal-card rounded-xl p-5 sm:p-6 font-mono text-sm shadow-2xl relative overflow-hidden"
+  class="flex flex-col border border-terminal-border rounded-xl p-5 sm:p-6 font-sans relative overflow-hidden"
 >
   <!-- Terminal Header Bar (Matching your chat component) -->
   <div
@@ -33,7 +33,7 @@
       <span>❯</span> ./initialize_connection
     </div>
     <p
-      class="text-xs text-terminal-muted/80 leading-relaxed pl-5 border-l border-terminal-border/40 ml-1.5"
+      class="text-md text-terminal-muted/80 leading-relaxed pl-5 border-l border-terminal-border/40 ml-1.5"
     >
       System ready. Awaiting user input for freelance opportunities or collaborations. <br />
       Define variables and execute transmission below.
@@ -65,7 +65,7 @@
       <div class="space-y-1.5 group">
         <label
           for="name"
-          class="text-[11px] font-bold tracking-wider text-terminal-muted/70 group-focus-within:text-green-400/80 transition-colors flex items-center gap-2"
+          class="text-md font-bold tracking-wider text-terminal-muted/70 group-focus-within:text-green-400/80 transition-colors flex items-center gap-2"
         >
           <span class="text-purple-400 font-normal">const</span> name
           <span class="text-blue-400 font-normal">=</span>
@@ -73,20 +73,20 @@
         <div
           class="flex items-center gap-2 bg-black/20 border border-terminal-border/40 focus-within:border-green-500/40 rounded px-3 py-2.5 transition-colors"
         >
-          <span class="text-yellow-200/50">"</span>
+          <span class="text-white">"</span>
           <input
             type="text"
             id="name"
             formControlName="name"
-            class="w-full bg-transparent text-yellow-200/90 placeholder-terminal-muted/30 outline-none text-sm"
+            class="w-full bg-transparent text-white outline-none"
             placeholder="Your good name"
             autocomplete="off"
           />
-          <span class="text-yellow-200/50">";</span>
+          <span class="text-white">";</span>
         </div>
         @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
-          <span class="text-[10px] text-red-400/90 mt-1 block"
-            >Uncaught TypeError: Invalid string assignment</span
+          <span class="text-[12px] text-red-400/90 mt-1 block"
+            >Empty or invalid name assignment</span
           >
         }
       </div>
@@ -95,7 +95,7 @@
       <div class="space-y-1.5 group">
         <label
           for="email"
-          class="text-[11px] font-bold tracking-wider text-terminal-muted/70 group-focus-within:text-green-400/80 transition-colors flex items-center gap-2"
+          class="text-md font-bold tracking-wider text-terminal-muted/70 group-focus-within:text-green-400/80 transition-colors flex items-center gap-2"
         >
           <span class="text-purple-400 font-normal">const</span> email
           <span class="text-blue-400 font-normal">=</span>
@@ -103,52 +103,55 @@
         <div
           class="flex items-center gap-2 bg-black/20 border border-terminal-border/40 focus-within:border-green-500/40 rounded px-3 py-2.5 transition-colors"
         >
-          <span class="text-yellow-200/50">"</span>
+          <span class="text-white">"</span>
           <input
             type="email"
             id="email"
             formControlName="email"
-            class="w-full bg-transparent text-yellow-200/90 placeholder-terminal-muted/30 outline-none text-sm"
+            class="w-full bg-transparent text-white placeholder-terminal-muted/30 outline-none"
             placeholder="you@example.com"
             autocomplete="off"
           />
-          <span class="text-yellow-200/50">";</span>
+          <span class="text-white">";</span>
         </div>
         @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
-          <span class="text-[10px] text-red-400/90 mt-1 block"
-            >ERR_INVALID_FORMAT: String must match email regex</span
+          <span class="text-[12px] text-red-400/90 mt-1 block"
+            >Empty or invalid email assignment</span
           >
         }
       </div>
     </div>
 
     <!-- Message Field -->
-    <div class="space-y-1.5 group">
+    <div class="space-y-2 group">
       <label
         for="message"
-        class="text-[11px] font-bold tracking-wider text-terminal-muted/70 group-focus-within:text-green-400/80 transition-colors flex items-center gap-2"
+        class="text-sm font-bold tracking-wider text-slate-400 group-focus-within:text-green-400 transition-colors flex items-center gap-2"
       >
         <span class="text-purple-400 font-normal">const</span> message
         <span class="text-blue-400 font-normal">= `</span>
       </label>
+
+      <!-- Unified container with internal padding instead of external margin -->
       <div
-        class="bg-black/20 border border-terminal-border/40 focus-within:border-green-500/40 rounded px-3 py-3 transition-colors ml-4 border-l-2"
+        class="bg-black/40 border border-slate-800 group-focus-within:border-green-500/50 rounded-lg p-4 transition-colors shadow-inner"
       >
         <textarea
           id="message"
-          rows="4"
+          rows="5"
           formControlName="message"
-          class="w-full resize-none bg-transparent text-green-300/80 placeholder-terminal-muted/30 outline-none text-sm leading-relaxed"
+          class="w-full resize-none bg-transparent text-slate-200 placeholder-slate-600 outline-none leading-relaxed text-sm"
           placeholder="How can we build something great together?"
         ></textarea>
       </div>
+
       <label
-        class="text-[11px] font-bold tracking-wider text-terminal-muted/70 group-focus-within:text-green-400/80 transition-colors block mt-1"
+        class="text-sm font-bold tracking-wider text-slate-400 group-focus-within:text-green-400 transition-colors block"
       >
         <span class="text-blue-400 font-normal">`;</span>
       </label>
       @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
-        <span class="text-[10px] text-red-400/90 mt-1 block"
+        <span class="text-[11px] text-red-400/90 mt-1.5 block"
           >ERR_PAYLOAD_SIZE: Length must be >= 10 bytes</span
         >
       }
@@ -168,7 +171,7 @@
           ></span>
           EXECUTING...
         } @else {
-          ./send_payload.sh
+          ./send_message.sh
         }
       </button>
       <span

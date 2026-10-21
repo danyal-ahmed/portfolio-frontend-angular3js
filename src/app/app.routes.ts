@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { ProjectCardComponent } from './components/project/project-card.component';
 import { Contact } from './components/contact/contact';
 import { Home } from './components/home/home';
+import { About } from './components/about/about';
 
 export const routes: Routes = [
   // Default route redirects to projects
@@ -11,6 +12,7 @@ export const routes: Routes = [
   // Map paths to components
   { path: 'home', component: Home },
   { path: 'projects', component: ProjectCardComponent },
+  { path: 'about', component: About },
   { path: 'contact', component: Contact },
   // Wildcard route catches invalid URLs and redirects safely
   { path: '**', redirectTo: 'projects' },
