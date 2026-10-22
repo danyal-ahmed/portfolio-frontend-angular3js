@@ -1,0 +1,92 @@
+<article
+  class="max-w-3xl mx-auto px-4 py-12 sm:py-20 text-white semi-bold font-sans leading-relaxed border border-terminal-border bg-slate-900/40 rounded-xl"
+>
+  <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-100 mb-8 font-mono">
+    <span class="text-green-400">#</span> about
+  </h1>
+
+  <!-- Floating Image Container -->
+  <!-- On mobile, it centers and stacks; on sm/md screens and up, it floats to the right with wrapping text -->
+  <div
+    class="float-none xs:float-right mx-auto xs:mr-0 xs:ml-6 mb-6 xs:mb-4 w-48 h-48 sm:w-56 sm:h-56 relative group flex justify-center"
+  >
+    <!-- Double-border outline with green accent -->
+    <div
+      class="absolute inset-0 border border-slate-800 rounded-xl translate-x-2 translate-y-2 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300 ease-out z-0"
+    ></div>
+    <div
+      class="absolute inset-0 border border-green-500/30 rounded-xl -translate-x-1 -translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"
+    ></div>
+
+    <!-- Outer holder with clipping and hover effect -->
+    <div
+      class="relative w-full h-full rounded-xl overflow-hidden border border-slate-700/80 bg-slate-900 z-10"
+    >
+      <img
+        src="assets/danyal.jpg"
+        alt="Danyal Ahmed"
+        class="w-full h-full object-cover filter grayscale contrast-[1.05] group-hover:grayscale-0 transition-all duration-500 ease-in-out scale-100 group-hover:scale-105"
+      />
+      <!-- Subtle scanning line overlay / hue -->
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none"
+      ></div>
+      <div
+        class="absolute inset-0 bg-green-500/5 mix-blend-color group-hover:bg-transparent transition-colors duration-300 pointer-events-none"
+      ></div>
+    </div>
+  </div>
+
+  <div class="space-y-6 text-lg">
+    <p>
+      Hi, I'm Danyal Ahmed. I am a Lead Full-Stack and Backend Software Engineer dedicated to
+      building robust, enterprise-grade applications and complex microservices.
+    </p>
+
+    <p>
+      My engineering foundation started with a Bachelor of Science in Computer Science from Sindh
+      Madressatul Islam University. Over the years, my focus has gravitated heavily toward backend
+      architecture. I specialize in
+      <strong class="text-slate-100 font-medium">Laravel, Node.js, and NestJS</strong>,
+      orchestrating data across relational and search-optimized databases like MySQL, Oracle, and
+      Elasticsearch. On the frontend, I rely on modern React and strict, clean vanilla
+      JavaScript—you won't find a single line of jQuery in my recent deployments.
+    </p>
+
+    <p>
+      Lately, my work intersects directly with applied AI. For the competitive intelligence platform
+      <strong class="text-slate-100 font-medium">DealSense</strong>, I engineered a system
+      leveraging Large Language Models (LLMs) to instantly parse unstructured credit agreements into
+      structured financial statistics and dashboards. I have also integrated the Google Vision API
+      to automate visual defect detection for multi-tenant field audit portals at
+      <strong class="text-slate-100 font-medium">Pakistan State Oil</strong>.
+    </p>
+
+    <p>
+      I love the rapid prototyping phase of software. I frequently partner with a dedicated frontend
+      developer friend to evaluate and launch new SaaS ideas, utilizing workflow orchestration tools
+      like n8n and Lovable to move from concept to production quickly.
+    </p>
+
+    <p>
+      Beyond the codebase, my life is anchored by my family and my kids. To unwind, I lean into my
+      creative side—directing and producing AI-generated cinematic short videos and skydiving
+      animations for YouTube using tools like Google Veo and Kling AI. All of this is, of course,
+      fueled by an ongoing supply of Nescafé instant tea.
+    </p>
+  </div>
+
+  <div class="mt-12 pt-8 border-t border-slate-800/80 clear-both">
+    <h2 class="text-xl font-bold text-slate-100 mb-4 font-mono">Core Technologies</h2>
+    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-base">
+      <li class="flex items-center gap-2">
+        <span class="text-green-400">▹</span> Node.js & NestJS
+      </li>
+      <li class="flex items-center gap-2"><span class="text-green-400">▹</span> Laravel</li>
+      <li class="flex items-center gap-2"><span class="text-green-400">▹</span> React & Angular</li>
+      <li class="flex items-center gap-2"><span class="text-green-400">▹</span> Elasticsearch</li>
+      <li class="flex items-center gap-2"><span class="text-green-400">▹</span> Oracle & MySQL</li>
+      <li class="flex items-center gap-2"><span class="text-green-400">▹</span> Applied LLMs</li>
+    </ul>
+  </div>
+</article>
