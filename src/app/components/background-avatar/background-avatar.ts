@@ -268,7 +268,7 @@ export class BackgroundAvatar implements AfterViewInit, OnDestroy {
     this.lineGeometry.setDrawRange(0, offset / 3);
 
     // Smooth camera parallax.
-    this.camera.position.x += (this.targetCameraX - this.camera.position.x) * 0.025;
+    this.camera.position.x += (this.targetCameraX - this.camera.position.x) * 0.055;
 
     this.camera.position.y += (this.targetCameraY - this.camera.position.y) * 0.025;
 

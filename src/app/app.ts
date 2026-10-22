@@ -1,21 +1,37 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { ProjectService } from './services/project.service';
+import { Component, inject, signal } from '@angular/core';
+import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
+import { filter } from 'rxjs';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+
+// Import your existing layout components
 import { BackgroundAvatar } from './components/background-avatar/background-avatar';
-import { Terminal } from './components/terminal/terminal';
 import { Header } from './components/header/header';
-import { RouterOutlet } from '@angular/router';
+import { Terminal } from './components/terminal/terminal';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, BackgroundAvatar, Terminal, Header],
+  imports: [RouterOutlet, BackgroundAvatar, Header, Terminal],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
 })
-export class App implements OnInit {
-  protected readonly projectService = inject(ProjectService);
+export class App {
+  isAdminRoute = signal(false);
+  isFocusMode = signal(false);
 
-  ngOnInit(): void {
-    this.projectService.fetchProjects();
+  constructor() {
+    const router = inject(Router);
+
+    router.events
+      .pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        takeUntilDestroyed(),
+      )
+      .subscribe((event: NavigationEnd) => {
+        this.isAdminRoute.set(event.urlAfterRedirects.startsWith('/admin'));
+      });
+  }
+
+  toggleFocusMode() {
+    this.isFocusMode.update((v) => !v);
   }
 }

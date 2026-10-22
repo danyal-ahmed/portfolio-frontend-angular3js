@@ -6,7 +6,7 @@ import { Home } from './components/home/home';
 import { About } from './components/about/about';
 
 export const routes: Routes = [
-  // Default route redirects to projects
+  // Default route redirects to home
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
   // Map paths to components
@@ -14,6 +14,10 @@ export const routes: Routes = [
   { path: 'projects', component: ProjectCardComponent },
   { path: 'about', component: About },
   { path: 'contact', component: Contact },
-  // Wildcard route catches invalid URLs and redirects safely
+
+  // LAZY LOADED ROUTES MUST GO BEFORE THE WILDCARD
+  { path: 'admin', loadChildren: () => import('./admin/admin.routes').then((m) => m.ADMIN_ROUTES) },
+
+  // Wildcard route catches invalid URLs and redirects safely (MUST BE LAST)
   { path: '**', redirectTo: 'projects' },
 ];
