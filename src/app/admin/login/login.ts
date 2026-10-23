@@ -8,7 +8,8 @@ import { AuthService } from '../../core/auth/auth.service';
   standalone: true,
   imports: [ReactiveFormsModule],
   template: `
-    <div class="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4 font-mono">
+    <!-- 1. Removed bg-slate-950, added relative z-10 -->
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 font-mono relative z-10">
       <div
         class="w-full max-w-md bg-slate-900/50 border border-slate-800 rounded-xl p-8 backdrop-blur-md shadow-2xl relative overflow-hidden"
       >

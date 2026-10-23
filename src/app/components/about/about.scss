@@ -1,0 +1,120 @@
+/* Import a standard monospace font like Fira Code or JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500&display=swap');
+
+:root {
+  --bg-color: #0d0d0d;
+  --text-main: #f3f4f6;
+  --text-dim: #6b7280;
+  --accent: #00ff66; /* Neon green */
+  --border-color: #262626;
+
+  --font-mono: 'Fira Code', monospace;
+  --font-sans: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  /* Subtle dot matrix background */
+  background-image: radial-gradient(circle, #333 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
+  margin: 0;
+}
+
+.terminal-container {
+  max-width: 650px;
+  width: 100%;
+}
+
+.dim {
+  color: var(--text-dim);
+}
+.accent {
+  color: var(--accent);
+}
+
+.breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.cmd-title {
+  font-family: var(--font-mono);
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  letter-spacing: -1px;
+}
+
+.prompt {
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  margin-bottom: 2.5rem;
+}
+
+.bio {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 3.5rem;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.info-list li {
+  display: flex;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+}
+
+.info-list .key {
+  color: var(--text-dim);
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.info-list .value {
+  color: var(--text-main);
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .cmd-title {
+    font-size: 3rem;
+  }
+  .info-list li {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .bio {
+    font-size: 1.1rem;
+  }
+}

@@ -8,9 +8,10 @@ import { AuthService } from '../../core/auth/auth.service';
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
   template: `
-    <div class="min-h-screen bg-slate-950 flex font-mono text-slate-300">
-      <!-- Sidebar -->
-      <aside class="w-64 border-r border-slate-800 bg-slate-900/50 flex flex-col">
+    <!-- 1. Removed bg-slate-950 and added relative z-10 here -->
+    <div class="min-h-screen flex font-mono text-slate-300 relative z-10">
+      <!-- 2. Added backdrop-blur-md to the sidebar -->
+      <aside class="w-64 border-r border-slate-800 bg-slate-900/50  flex flex-col">
         <div class="p-6 border-b border-slate-800">
           <div
             class="text-green-400 font-bold tracking-widest uppercase text-sm flex items-center gap-2"

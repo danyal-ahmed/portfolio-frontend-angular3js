@@ -5,7 +5,7 @@ import { AdminService } from '../admin.service';
   selector: 'app-projects-admin',
   standalone: true,
   template: `
-    <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-6 backdrop-blur-sm">
+    <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-6 ">
       <div class="flex justify-between items-center mb-6">
         <h2 class="text-2xl font-bold text-white flex items-center gap-3">
           <span class="text-green-400">#</span> Manage Projects

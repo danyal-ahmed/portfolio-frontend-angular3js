@@ -1,14 +1,14 @@
 <article
-  class="max-w-3xl mx-auto px-4 py-12 sm:py-20 text-white semi-bold font-sans leading-relaxed border border-terminal-border bg-slate-900/40 rounded-xl"
+  class="max-w-4xl mx-auto px-4 py-12 sm:py-20 text-white font-sans leading-relaxed border border-slate-800/60 bg-slate-900/40 rounded-xl relative z-10 backdrop-blur-sm"
 >
   <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-100 mb-8 font-mono">
     <span class="text-green-400">#</span> Whoami
   </h1>
 
   <!-- Floating Image Container -->
-  <!-- On mobile, it centers and stacks; on sm/md screens and up, it floats to the right with wrapping text -->
+  <!-- Floats right on sm/md screens allowing the terminal text to wrap around it -->
   <div
-    class="float-none xs:float-right mx-auto xs:mr-0 xs:ml-6 mb-6 xs:mb-4 w-48 h-48 sm:w-56 sm:h-56 relative group flex justify-center"
+    class="float-none sm:float-right mx-auto sm:mr-0 sm:ml-8 mb-8 sm:mb-4 w-48 h-48 sm:w-64 sm:h-64 relative group flex justify-center"
   >
     <!-- Double-border outline with green accent -->
     <div
@@ -20,7 +20,7 @@
 
     <!-- Outer holder with clipping and hover effect -->
     <div
-      class="relative w-full h-full rounded-xl overflow-hidden border border-slate-700/80 bg-slate-900 z-10"
+      class="relative w-full h-full rounded-xl overflow-hidden border border-slate-700/80 bg-slate-950 z-10"
     >
       <img
         src="/images/my.jpg"
@@ -37,56 +37,248 @@
     </div>
   </div>
 
-  <div class="space-y-6 text-lg">
-    <p>
-      Hi, I'm Danyal Ahmed. I am a Lead Full-Stack and Backend Software Engineer dedicated to
-      building robust, enterprise-grade applications and complex microservices.
+  <!-- Terminal Container -->
+  <div class="terminal-container font-mono text-sm sm:text-base mb-12">
+    <div class="text-slate-500 mb-4"><span class="opacity-50">~ /</span> about</div>
+
+    <h2 class="text-xl text-slate-200 mb-6 font-bold">
+      <span class="text-green-500">$</span> whoami
+    </h2>
+
+    <div class="text-slate-300 mb-4">
+      Danyal Ahmed <span class="text-slate-600 mx-2">•</span>
+      <span class="text-green-400">@danyal</span>
+    </div>
+
+    <p class="text-slate-400 mb-8 max-w-xl">
+      <span class="text-slate-200 font-bold">Full-stack software engineer</span> specializing in
+      enterprise backend architecture. I build robust data systems, orchestrate API workflows, and
+      integrate AI capabilities into scalable web applications.
     </p>
 
-    <p>
-      My engineering foundation started with a Bachelor of Science in Computer Science from Sindh
-      Madressatul Islam University. Over the years, my focus has gravitated heavily toward backend
-      architecture. I specialize in
-      <strong class="text-slate-100 font-medium">Laravel, Node.js, and NestJS</strong>,
-      orchestrating data across relational and search-optimized databases like MySQL, Oracle, and
-      Elasticsearch. On the frontend, I rely on modern React and strict, clean vanilla
-      JavaScript—you won't find a single line of jQuery in my recent deployments.
-    </p>
-
-    <p>
-      Lately, my work intersects directly with applied AI. For the competitive intelligence platform
-      <strong class="text-slate-100 font-medium">DealSense</strong>, I engineered a system
-      leveraging Large Language Models (LLMs) to instantly parse unstructured credit agreements into
-      structured financial statistics and dashboards. I have also integrated the Google Vision API
-      to automate visual defect detection for multi-tenant field audit portals at
-      <strong class="text-slate-100 font-medium">Pakistan State Oil</strong>.
-    </p>
-
-    <p>
-      I love the rapid prototyping phase of software. I frequently partner with a dedicated frontend
-      developer friend to evaluate and launch new SaaS ideas, utilizing workflow orchestration tools
-      like n8n and Lovable to move from concept to production quickly.
-    </p>
-
-    <p>
-      Beyond the codebase, my life is anchored by my family and my kids. To unwind, I lean into my
-      creative side—directing and producing AI-generated cinematic short videos and skydiving
-      animations for YouTube using tools like Google Veo and Kling AI. All of this is, of course,
-      fueled by an ongoing supply of Nescafé instant tea.
-    </p>
+    <ul class="space-y-3 text-slate-400">
+      <li>
+        <span class="text-green-500 mr-2">&rarr; name</span>
+        <span class="text-slate-200">Danyal Ahmed</span>
+      </li>
+      <li>
+        <span class="text-green-500 mr-2">&rarr; role</span>
+        <span class="text-slate-200">Lead Backend Developer</span>
+      </li>
+      <li>
+        <span class="text-green-500 mr-2">&rarr; based in</span>
+        <span class="text-slate-200">Karachi, PK <span class="text-slate-600">// GMT+5</span></span>
+      </li>
+      <li>
+        <span class="text-green-500 mr-2">&rarr; stack</span>
+        <span class="text-slate-200">Laravel, Node.js, React, NestJS</span>
+      </li>
+      <li>
+        <span class="text-green-500 mr-2">&rarr; status</span>
+        <span class="text-slate-200 flex items-center gap-2 inline-flex">
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> open to roles
+        </span>
+      </li>
+    </ul>
   </div>
 
-  <div class="mt-12 pt-8 border-t border-slate-800/80 clear-both">
-    <h2 class="text-xl font-bold text-slate-100 mb-4 font-mono">Core Technologies</h2>
-    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-base">
-      <li class="flex items-center gap-2">
-        <span class="text-green-400">▹</span> Node.js & NestJS
+  <!-- Clear the float so the next section drops below the image -->
+  <div class="clear-both"></div>
+
+  <!-- ========================================== -->
+  <!-- SECTION 01: BIOGRAPHY                      -->
+  <!-- ========================================== -->
+  <div class="max-w-5xl mx-auto text-slate-300 font-sans mt-12 animate-fade-in">
+    <!-- Section Header -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 font-mono text-xs tracking-widest text-slate-500 mb-4">
+        <span class="text-green-500 font-bold">01</span>
+        <span class="uppercase">The Longer Version</span>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-slate-100 tracking-tight">A bit about me</h2>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-sm leading-relaxed mb-20">
+      <!-- Left Column -->
+      <div class="space-y-6">
+        <p>
+          <span
+            class="float-left text-4xl font-bold text-green-500 leading-none pr-1.5 pt-1 font-mono"
+            >I</span
+          >
+          'm a full-stack software engineer and lead backend developer based in Karachi. My path
+          into software is rooted in building scalable, enterprise-grade systems. Working with
+          frameworks like Laravel and NestJS, and orchestrating complex databases, I discovered
+          early on that writing clean, functional code that powers real-world business operations is
+          what drives me today.
+        </p>
+        <p>
+          I studied Computer Science at Sindh Madressatul Islam University, where I learned just how
+          much the fundamentals matter. Algorithms, data structures, and the reasoning behind them
+          never go out of style. Frameworks change every year, but understanding why things work
+          lets you choose the right approach. My professional journey has spanned building
+          multi-tenant platforms for Pakistan State Oil to engineering financial analytics engines
+          for DealSense. Most recently, I wrapped up a role at TechSurge, where I kept growing and
+          proving my expertise across the whole stack.
+        </p>
+      </div>
+
+      <!-- Right Column -->
+      <div class="space-y-6">
+        <p>
+          Lately, I've been focused on staying current with where the industry is heading, spending
+          a lot of time experimenting with large language models, OpenAI integrations, and workflow
+          orchestrators like n8n. This portfolio is part of that: I treat it as a playground to
+          showcase what these tools can do once they are wired into a real product.
+        </p>
+        <p>
+          When I'm away from the keyboard, I'm usually exploring the creative side of technology. I
+          spend time creating AI-generated animated short videos and cinematic clips using tools
+          like Google Veo and Kling AI for YouTube. And last but not least, I'm completely addicted
+          to a good cup of instant tea from my Nescafé machine while brainstorming the next SaaS
+          idea with my friends.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- SECTION 03: THE SHORT TIMELINE             -->
+  <!-- ========================================== -->
+  <div
+    class="max-w-5xl mx-auto text-slate-300 font-sans mt-16 animate-fade-in relative z-10 clear-both"
+  >
+    <!-- Section Header -->
+    <div class="mb-16 border-b border-slate-800/60 pb-8">
+      <div class="flex items-center gap-3 font-mono text-xs tracking-widest text-slate-500 mb-4">
+        <span class="text-green-500 font-bold">03</span>
+        <span class="uppercase">How I Got Here</span>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-slate-100 tracking-tight">
+        The short timeline
+      </h2>
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="relative max-w-4xl">
+      <!-- Continuous Vertical Line -->
+      <div class="absolute left-[3.25rem] md:left-[4.75rem] top-3 bottom-0 w-px bg-slate-800"></div>
+
+      <!-- Timeline Items -->
+      <div class="space-y-12">
+        <!-- Item 1 -->
+        <div class="relative flex gap-6 md:gap-10 items-start group">
+          <div
+            class="w-10 md:w-16 text-right font-mono text-sm text-slate-500 pt-0.5 shrink-0 transition-colors group-hover:text-slate-400"
+          >
+            2026
+          </div>
+          <div
+            class="relative z-10 w-2.5 h-2.5 rounded-full bg-green-500 ring-4 ring-slate-950 mt-1.5 shrink-0 shadow-[0_0_8px_rgba(34,197,94,0.6)] group-hover:scale-125 transition-transform duration-300"
+          ></div>
+          <div class="flex-1">
+            <h3 class="text-base font-bold text-slate-200 mb-2 font-mono">Building akkila.dev</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Designing and shipping this self-hosted portfolio: full-stack Angular and Tailwind, a
+              live 3JS environment, and a robust admin panel. Currently seeking new full-stack
+              opportunities following my tenure at TechSurge.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="relative flex gap-6 md:gap-10 items-start group">
+          <div
+            class="w-10 md:w-16 text-right font-mono text-sm text-slate-500 pt-0.5 shrink-0 transition-colors group-hover:text-slate-400"
+          >
+            2026
+          </div>
+          <div
+            class="relative z-10 w-2.5 h-2.5 rounded-full bg-green-500 ring-4 ring-slate-950 mt-1.5 shrink-0 shadow-[0_0_8px_rgba(34,197,94,0.6)] group-hover:scale-125 transition-transform duration-300"
+          ></div>
+          <div class="flex-1">
+            <h3 class="text-base font-bold text-slate-200 mb-2 font-mono">
+              Engineering at DealSense & TechSurge
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Architected microservices and financial data visualization engines. Engineered
+              competitive intelligence alternatives leveraging LLMs to instantly parse unstructured
+              credit agreements into structured financial statistics and dashboards.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="relative flex gap-6 md:gap-10 items-start group">
+          <div
+            class="w-10 md:w-16 text-right font-mono text-sm text-slate-500 pt-0.5 shrink-0 transition-colors group-hover:text-slate-400"
+          >
+            2025
+          </div>
+          <div
+            class="relative z-10 w-2.5 h-2.5 rounded-full bg-green-500 ring-4 ring-slate-950 mt-1.5 shrink-0 shadow-[0_0_8px_rgba(34,197,94,0.6)] group-hover:scale-125 transition-transform duration-300"
+          ></div>
+          <div class="flex-1">
+            <h3 class="text-base font-bold text-slate-200 mb-2 font-mono">
+              Enterprise Solutions for PSO
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Developed a multi-tenant field audit and site inspection portal for Pakistan State
+              Oil. Integrated the Google Vision API for visual defect detection and built resilient
+              Oracle Database infrastructures.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="relative flex gap-6 md:gap-10 items-start group">
+          <div
+            class="w-10 md:w-16 text-right font-mono text-sm text-slate-500 pt-0.5 shrink-0 transition-colors group-hover:text-slate-400"
+          >
+            2020
+          </div>
+          <div
+            class="relative z-10 w-2.5 h-2.5 rounded-full bg-green-500 ring-4 ring-slate-950 mt-1.5 shrink-0 shadow-[0_0_8px_rgba(34,197,94,0.6)] group-hover:scale-125 transition-transform duration-300"
+          ></div>
+          <div class="flex-1">
+            <h3 class="text-base font-bold text-slate-200 mb-2 font-mono">
+              Computer Science Foundation
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Earned my Bachelor of Science in Computer Science from Sindh Madressatul Islam
+              University. Built a deep foundation in complex algorithms, software architecture, and
+              the systems-level logic that continues to anchor my backend development approach
+              today.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Technologies -->
+  <div class="mt-20 pt-8 border-t border-slate-800/80 clear-both">
+    <h2 class="text-xl font-bold text-slate-100 mb-6 font-mono">Core Technologies</h2>
+    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm font-mono text-slate-400">
+      <li class="flex items-center gap-2 hover:text-green-400 transition-colors cursor-default">
+        <span class="text-green-500">▹</span> Node.js & NestJS
       </li>
-      <li class="flex items-center gap-2"><span class="text-green-400">▹</span> Laravel</li>
-      <li class="flex items-center gap-2"><span class="text-green-400">▹</span> React & Angular</li>
-      <li class="flex items-center gap-2"><span class="text-green-400">▹</span> Elasticsearch</li>
-      <li class="flex items-center gap-2"><span class="text-green-400">▹</span> Oracle & MySQL</li>
-      <li class="flex items-center gap-2"><span class="text-green-400">▹</span> Applied LLMs</li>
+      <li class="flex items-center gap-2 hover:text-green-400 transition-colors cursor-default">
+        <span class="text-green-500">▹</span> Laravel
+      </li>
+      <li class="flex items-center gap-2 hover:text-green-400 transition-colors cursor-default">
+        <span class="text-green-500">▹</span> React & Angular
+      </li>
+      <li class="flex items-center gap-2 hover:text-green-400 transition-colors cursor-default">
+        <span class="text-green-500">▹</span> Elasticsearch
+      </li>
+      <li class="flex items-center gap-2 hover:text-green-400 transition-colors cursor-default">
+        <span class="text-green-500">▹</span> Oracle & MySQL
+      </li>
+      <li class="flex items-center gap-2 hover:text-green-400 transition-colors cursor-default">
+        <span class="text-green-500">▹</span> Applied LLMs
+      </li>
     </ul>
   </div>
 </article>
